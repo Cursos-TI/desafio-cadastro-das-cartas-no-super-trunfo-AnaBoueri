@@ -9,7 +9,9 @@ int main() {
     int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
+    float pib_percapita1, pib_percapita2;
     int ponto_turistico1, ponto_turistico2;
+    float densidade1, densidade2;
 
     // Lendo os dados da carta 1
     printf("*** Vamos adicionar uma carta ***\n");
@@ -30,6 +32,12 @@ int main() {
 
     printf("*** Carta 1 adicionada com sucesso! ***\n\n");
 
+    // Calculando a densidade populacional da carta 1
+    densidade1 = (float)populacao1 / area1;
+
+    // Calculando o PIB per capita da carta 1
+    pib_percapita1 = pib1 / populacao1;
+
     // Mostrando os dados da carta 1
     printf("--- * --- CARTA 01 --- * ---\n");
     printf("Estado: %c\n", estado1);
@@ -38,7 +46,9 @@ int main() {
     printf("População: %d\n", populacao1);
     printf("Área: %.2f\n", area1);
     printf("PIB: %.2f\n", pib1);
-    printf("Número de pontos turísticos: %d\n\n", ponto_turistico1);
+    printf("Número de pontos turísticos: %d\n", ponto_turistico1);
+    printf("Densidade Populacional: %.2f\n", densidade1);
+    printf("PIB per Papita: %.2f\n\n", pib_percapita1);
 
     // Lendo os dados da carta 2
     printf("*** Vamos adicionar outra carta ***\n");
@@ -59,6 +69,12 @@ int main() {
 
     printf("*** Carta 2 adicionada com sucesso! ***\n\n");
 
+    // Calculando a densidade populacional da carta 2
+    densidade2 = (float)populacao2 / area2;
+
+    // Calculando o PIB per capita da carta 2
+    pib_percapita2 = pib2 / populacao2;
+
     // Mostrando os dados da carta 2
     printf("--- * --- CARTA 02 --- * ---\n");
     printf("Estado: %c\n", estado2);
@@ -67,10 +83,12 @@ int main() {
     printf("População: %d\n", populacao2);
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
-    printf("Número de pontos turísticos: %d\n\n", ponto_turistico2);
+    printf("Número de pontos turísticos: %d\n", ponto_turistico2);
+    printf("Densidade Populacional: %.2f\n", densidade2);
+    printf("PIB per Papita: %.2f\n\n", pib_percapita2);
 
     // AGRADECIMENTO
-    printf("\nObrigado por adicionar as cartas!\n");
+    printf("\nObrigado por adicionar as cartas!\n\n");
 
     return 0;
 }
